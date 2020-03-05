@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <h1>学生信息</h1>
+    <fieldset>
+        <legend>学生档案</legend>
+        <form id="testform" method="get" action="#s">
+            <p>姓名：</p>
+            <input type="text" name="sna" placeholder="请输入姓名" required autocomplete="off">
+            <p>学号：</p>
+            <input type="text" name="num" placeholder="请输入学号" required autocomplete="off">
+            <p>手机号码：</p>
+            <input type="tel" name="tel1" placeholder="请输入电话" required autocomplete="off">
+            <p>邮箱地址：</p>
+            <input type="email" name="email" placeholder="请输入邮箱地址"required autocomplete="off">
+            <p>录取学校：</p>
+            <input type="search" name="sco" list="scol">
+            <datalist id="scol">
+                <option value="清华大学"></option>
+                <option value="北京大学"></option>
+                <option value="河北师范大学"></option>
+                <option value="河北科技大学"></option>
+            </datalist>
+            <p>入学成绩：</p>
+            <input type="text" name="sco">
+            <p>入学时间：</p>
+            <input type="date" name="data" date>
+            <br>
+            <br>
+            <input type="submit" value="提交">
+        </form>
+    </fieldset>
+</body>
+</html>
