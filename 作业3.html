@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="demo3.css">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>网页换肤</legend>
+        <div id="nav">
+            <div id="color1" title="灰色"></div>
+            <div id="color2" title="浅紫色"></div>
+            <div id="color3" title="红色"></div>
+            <div id="color4" title="黄色"></div>
+            <div id="color5" title="绿色"></div>
+            <div id="color6" title="粉色"></div>
+        </div>
+        <div id="foot">
+            <p>LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网页时仍然可以继续使用。</p>
+        </div>
+    </fieldset>
+</body>
+<script>
+    var col1 = document.getElementById("color1");
+    var col2 = document.getElementById("color2");
+    var col3 = document.getElementById("color3");
+    var col4 = document.getElementById("color4");
+    var col5 = document.getElementById("color5");
+    var col6 = document.getElementById("color6");
+    var change = document.getElementById("foot");
+
+        col1.onclick = function(){
+        change.style.backgroundColor = "silver";
+        col1.style.top = "10px";
+        col2.style.top = "20px";
+        col3.style.top = "20px";
+        col4.style.top = "20px";
+        col5.style.top = "20px";
+        col6.style.top = "20px";
+        localStorage.setItem("changeColor","silver");
+        localStorage.setItem("col1Top","10px");
+        localStorage.setItem("col2Top","20px");
+        localStorage.setItem("col3Top","20px");
+        localStorage.setItem("col4Top","20px");
+        localStorage.setItem("col5Top","20px");
+        localStorage.setItem("col6Top","20px");
+    }
+
+    col2.onclick = function(){
+        change.style.backgroundColor = "palevioletred";
+        col1.style.top = "20px";
+        col2.style.top = "10px";
+        col3.style.top = "20px";
+        col4.style.top = "20px";
+        col5.style.top = "20px";
+        col6.style.top = "20px";
+        localStorage.setItem("changeColor","palevioletred");
+        localStorage.setItem("col1Top","20px");
+        localStorage.setItem("col2Top","10px");
+        localStorage.setItem("col3Top","20px");
+        localStorage.setItem("col4Top","20px");
+        localStorage.setItem("col5Top","20px");
+        localStorage.setItem("col6Top","20px");
+    }
+
+    col3.onclick = function(){
+        change.style.backgroundColor = "red";
+        col1.style.top = "20px";
+        col2.style.top = "20px";
+        col3.style.top = "10px";
+        col4.style.top = "20px";
+        col5.style.top = "20px";
+        col6.style.top = "20px";
+        localStorage.setItem("changeColor","red");
+        localStorage.setItem("col1Top","20px");
+        localStorage.setItem("col2Top","20px");
+        localStorage.setItem("col3Top","10px");
+        localStorage.setItem("col4Top","20px");
+        localStorage.setItem("col5Top","20px");
+        localStorage.setItem("col6Top","20px");
+    }
+
+    col4.onclick = function(){
+        change.style.backgroundColor = "yellow";
+        col1.style.top = "20px";
+        col2.style.top = "20px";
+        col3.style.top = "20px";
+        col4.style.top = "10px";
+        col5.style.top = "20px";
+        col6.style.top = "20px";
+        localStorage.setItem("changeColor","yellow");
+        localStorage.setItem("col1Top","20px");
+        localStorage.setItem("col2Top","20px");
+        localStorage.setItem("col3Top","20px");
+        localStorage.setItem("col4Top","10px");
+        localStorage.setItem("col5Top","20px");
+        localStorage.setItem("col6Top","20px");
+    }
+
+    col5.onclick = function(){
+        change.style.backgroundColor = "green";
+        col1.style.top = "20px";
+        col2.style.top = "20px";
+        col3.style.top = "20px";
+        col4.style.top = "20px";
+        col5.style.top = "10px";
+        col6.style.top = "20px";
+        localStorage.setItem("changeColor","green");
+        localStorage.setItem("col1Top","20px");
+        localStorage.setItem("col2Top","20px");
+        localStorage.setItem("col3Top","20px");
+        localStorage.setItem("col4Top","20px");
+        localStorage.setItem("col5Top","10px");
+        localStorage.setItem("col6Top","20px");
+    }
+
+    col6.onclick = function(){
+        change.style.backgroundColor = "pink";
+        col1.style.top = "20px";
+        col2.style.top = "20px";
+        col3.style.top = "20px";
+        col4.style.top = "20px";
+        col5.style.top = "20px";
+        col6.style.top = "10px";
+        localStorage.setItem("changeColor","pink");
+        localStorage.setItem("col1Top","20px");
+        localStorage.setItem("col2Top","20px");
+        localStorage.setItem("col3Top","20px");
+        localStorage.setItem("col4Top","20px");
+        localStorage.setItem("col5Top","20px");
+        localStorage.setItem("col6Top","10px");
+    }
+
+
+    var changeColor = localStorage.getItem("changeColor");
+    var c1 = localStorage.getItem("col1Top");
+    var c2 = localStorage.getItem("col2Top");
+    var c3 = localStorage.getItem("col3Top");
+    var c4 = localStorage.getItem("col4Top");
+    var c5 = localStorage.getItem("col5Top");
+    var c6 = localStorage.getItem("col6Top");
+    change.style.backgroundColor = changeColor;
+    col1.style.top = c1;
+    col2.style.top = c2;
+    col3.style.top = c3;
+    col4.style.top = c4;
+    col5.style.top = c5;
+    col6.style.top = c6;
+
+    // window.onload = function colorLoad(){
+    //     if(localStorage.pagecount == 1){
+    //         change.style.backgroundColor = "silver";
+
+    //     }
+    //     else{
+    //         change.style.backgroundColor = localStorage.getItem("changeColor");
+    //     }
+        
+    // }
+</script>
+</html>
