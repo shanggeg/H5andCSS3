@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片墙</title>
+    <style>
+        /* body{
+            background-color: blanchedalmond;
+        } */
+        #potato{
+            width: 1300px;
+            height: 200px;
+            margin: auto;
+            background-image: url(images/bg3.JPG);
+            position: relative;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            
+        }
+        #potato img{
+            border: 1px black;
+            box-shadow: 2px 2px 3px rgba(50,50,50,0.5);
+            position: absolute;
+            transition: all 0.5s linear;
+        }
+        #potato img:hover{
+            transform: rotate(0deg);
+            transform:scale(1.2) ;
+        }
+        #img1{
+            left: 50px;
+            top: 20px;
+            transform: rotate(-5deg);
+        }
+        #img2{
+            left: 250px;
+            top: 20px;
+            transform: rotate(10deg);
+        }
+        #img3{
+            left: 450px;
+            top: 20px;
+            transform: rotate(-10deg);
+        }
+        #img4{
+            left: 650px;
+            top: 20px;
+            transform: rotate(5deg);
+        }
+        #img5{
+            left:850px ;
+            top: 20px;
+            transform: rotate(10deg);
+        }
+        #img6{
+            left: 1050px;
+            top: 20px;
+            transform: rotate(-8deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="potato">
+        <img id="img1" src="images/11.jpg" alt="">
+        <img id="img2" src="images/22.JPG" alt="">
+        <img id="img3" src="images/33.JPG" alt="">
+        <img id="img4" src="images/44.JPG" alt="">
+        <img id="img5" src="images/55.JPG" alt="">
+        <img id="img6" src="images/66.JPG" alt="">
+    </div>
+</body>
+</html>
